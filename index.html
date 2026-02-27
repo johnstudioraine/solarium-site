@@ -60,6 +60,20 @@
     }
     .sr-only { position: absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
 
+    /* ─── Custom scrollbar ─── */
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(200,169,110,0.35) transparent;
+    }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(200,169,110,0.35);
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(224,188,128,0.65); }
+
     /* ─── Reveal ─── */
     [data-reveal] {
       opacity: 0;
@@ -911,8 +925,8 @@
       .footer-cols { flex-direction: column; gap: 2rem; }
     }
 
-    /* ─── No parallax on reduced-motion / mobile ─── */
-    @media (prefers-reduced-motion: reduce), (max-width: 900px) {
+    /* ─── Disable parallax / reveals only for prefers-reduced-motion ─── */
+    @media (prefers-reduced-motion: reduce) {
       [data-reveal] { opacity: 1; transform: none; transition: none; }
       .world-bg, .quote-bg { will-change: auto; }
     }
@@ -1277,8 +1291,7 @@
 
   // ── Reveal on scroll ──
   const revealEls = document.querySelectorAll('[data-reveal]');
-  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches
-      && window.innerWidth > 900) {
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1286,17 +1299,17 @@
           obs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
     revealEls.forEach(el => obs.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('is-visible'));
   }
 
-  // ── Parallax (desktop only) ──
-  if (window.innerWidth > 900
-      && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  // ── Parallax ──
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     const worldBg = document.getElementById('worldBg');
     const quoteBg = document.getElementById('quoteBg');
+    const isMobile = window.innerWidth <= 900;
 
     function parallax(el, factor) {
       const rect = el.parentElement.getBoundingClientRect();
@@ -1309,8 +1322,8 @@
     window.addEventListener('scroll', () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          parallax(worldBg, 0.16);
-          parallax(quoteBg, 0.2);
+          parallax(worldBg, isMobile ? 0.07 : 0.16);
+          parallax(quoteBg, isMobile ? 0.09 : 0.2);
           ticking = false;
         });
         ticking = true;
