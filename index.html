@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#080808" />
-  <title>THE SOLARIUM — A Visual Novel</title>
+  <title>THE SOLARIUM — Candid Bay Productions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -284,7 +284,7 @@
     /* ── Sound toggle ── */
     .sound-btn {
       position: absolute;
-      bottom: clamp(3rem, 7vh, 7rem);
+      top: 5rem;
       right: var(--pad);
       z-index: 3;
       display: flex;
@@ -893,7 +893,7 @@
       .hero-cta .btn { width: 100%; justify-content: center; }
 
       .scroll-hint { display: none; }
-      .sound-btn { bottom: 1.5rem; right: 1.25rem; }
+      .sound-btn { top: 4.2rem; right: 1rem; }
 
       .world-strip { grid-template-columns: 1fr; }
       .world-strip-item:last-child { display: block; }
@@ -961,12 +961,13 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <p class="label">A Visual Novel</p>
+    <p class="label">Candid Bay Productions</p>
     <h1 class="hero-title">The Solarium</h1>
     <p class="hero-sub">
-      The sun is no longer a gift. Survive the wilderness,
-      forge impossible alliances, and decide who — and what —
-      deserves to live.
+      2031. The ozone layer is gone. Survivors ration sunband charge in military shelters
+      while the powerful seal themselves inside walled solariums. You're a soldier stranded
+      in the Wilds — and the woman beside you doesn't need protection from the light
+      that would kill you both.
     </p>
     <div class="hero-cta">
       <a href="#release" class="btn btn-gold">
@@ -1004,10 +1005,10 @@
 
     <div class="synopsis-text" data-reveal="left">
       <span class="label">The World</span>
-      <h2 class="display">The sun has turned.</h2>
+      <h2 class="display">The ozone layer is gone.</h2>
       <div class="divider"></div>
-      <p>In a scorched future, unfiltered solar radiation reshapes life at the cellular level. Pockets of survivors huddle in fortified camps, rationing what little shade remains. The <em>Solarium</em> — a towering institutional compound — promises sanctuary, but its walls hide a truth that could unravel everything.</p>
-      <p>You are a new arrival. An outsider. Armed with nothing but your instincts and the choices you make, you must navigate a world that is equal parts beautiful and lethal.</p>
+      <p>It's October 2031. The ozone layer collapsed without warning — and with it, any illusion that the world could be saved. Unfiltered UV radiation burns through everything. The wealthy retreat into solar-powered solariums: walled compounds with every comfort and a plasma barrier to keep the rest out. Soldiers and stragglers make do with military forts on the edge of the Wilds.</p>
+      <p>You are a new recruit, stranded after a training mission goes wrong. The woman you find in the forest has jeweled scars, no sunband, and no fear of the light that is slowly killing everything else. She calls herself Su'til. She's not from here — not from anywhere near here. And the Solarium wants you both.</p>
       <a href="#release" class="btn btn-ghost">Play for Free</a>
     </div>
 
@@ -1030,10 +1031,10 @@
   <div class="world-inner">
     <div class="world-text" data-reveal>
       <span class="label">The Setting</span>
-      <h2 class="display">A wilderness on the edge of collapse.</h2>
+      <h2 class="display">A world that wants you dead.</h2>
       <div class="divider"></div>
-      <p>From frost-cracked tundra to sun-bleached canyon flats, every environment in The Solarium breathes tension. The land itself has become hostile — and the creatures within it, more so.</p>
-      <p>Explore, scavenge, and survive — but every step into the wilds carries consequences you may not see coming.</p>
+      <p>From the frost-cracked Siberian tundra where Su'til first battled a lesion-covered bear, to the canyon flats of the Midwest where you first survive — every location in The Solarium is a place where the wrong move is your last. The Wilds are full of starving, infected wildlife. Stragglers wander the forest perimeter. And the Solarium compound looms on the edge of everything, its plasma security barrier humming with something worse than electricity.</p>
+      <p>The fort is shelter. It is not safety. Nothing out here is.</p>
     </div>
 
     <div class="world-strip">
@@ -1063,31 +1064,31 @@
       <div class="char-overlay">
         <p class="char-role">Sunborne Warrior</p>
         <h3 class="char-name">Su'til</h3>
-        <p class="char-desc">A sunborne who questions the doctrine of her own kind. Her loyalty is earned — if it's earned at all.</p>
+        <p class="char-desc">Born on the e'mul — a star station beyond Earth — she arrived on a trial mission and survived what would kill anyone else. Her jeweled scars mark both her origins and her doubts about what her people are really doing here.</p>
       </div>
     </div>
     <div class="char-card" data-reveal style="transition-delay:.1s">
       <img src="/game/images/kigi/kigileft.png" alt="Kigi" loading="lazy" style="object-position:top center" />
       <div class="char-overlay">
-        <p class="char-role">Pilot · Enigma</p>
+        <p class="char-role">The Messenger</p>
         <h3 class="char-name">Kigi</h3>
-        <p class="char-desc">Cold, precise, and impossible to read. Her motives remain shrouded even when she saves your life.</p>
+        <p class="char-desc">Su'til's Messenger and handler. Silver-blonde, scarred, and impossibly composed. She has guided the sunborne for millennia toward a single purpose. Her arrival on Earth means the mission has entered its final phase.</p>
       </div>
     </div>
     <div class="char-card" data-reveal style="transition-delay:.2s">
       <img src="/game/images/zeff/zeff.png" alt="Zeff" loading="lazy" />
       <div class="char-overlay">
-        <p class="char-role">Survivor</p>
+        <p class="char-role">Private · Fort Soldier</p>
         <h3 class="char-name">Zeff</h3>
-        <p class="char-desc">Carrying the weight of loss. Whether that shapes him into something better — or worse — depends on you.</p>
+        <p class="char-desc">The first soldier you meet outside the fort. He watched his father become a straggler. He saw Su'til melt a pistol with her bare hands. He's still here — which tells you something about what it takes to survive out here.</p>
       </div>
     </div>
     <div class="char-card" data-reveal style="transition-delay:.3s">
       <img src="/game/images/williams/williamsfull.png" alt="Williams" loading="lazy" />
       <div class="char-overlay">
-        <p class="char-role">Commander</p>
+        <p class="char-role">Lieutenant · Fort Commander</p>
         <h3 class="char-name">Williams</h3>
-        <p class="char-desc">A steadying presence in a collapsing world. The fort's quiet backbone — and one of its most complicated truths.</p>
+        <p class="char-desc">She runs the fort with unsparing clarity. When she locked Su'til in a closet overnight to test her limits, she wasn't wrong to — and she wasn't wrong to let her out. Williams knows when to push and when to trust. The fort survives because of it.</p>
       </div>
     </div>
   </div>
@@ -1103,12 +1104,13 @@
       <span class="label">Branching Narrative</span>
       <h2 class="display">Every word.<br>Every silence.<br>Every choice.</h2>
       <div class="divider"></div>
-      <p>The Solarium is built on consequence. Decisions made in the first act ripple into the third in ways you won't expect. There are no clean heroes here — only people trying to survive.</p>
+      <p>Do you help the straggler outside the Solarium — or leave him to die by morning? Do you trust Su'til enough to let her handle Zeff, or do you step between them? When Kigi offers you a choice above a field of quarantine cages, what does your answer say about you?</p>
+      <p>The Solarium doesn't let you off easy. The people you trust, the alliances you build, and the things you're willing to do all shape a story that is entirely your own.</p>
       <ul class="choice-list">
-        <li>Multiple endings shaped by your relationships</li>
-        <li>Time-pressure decisions with permanent consequences</li>
-        <li>Exploration, combat, and puzzle sidequests</li>
-        <li>Original score and full sound design</li>
+        <li>Multiple endings driven by who you trust and what you sacrifice</li>
+        <li>Split-second, timed decisions with permanent consequences</li>
+        <li>Exploration, dice-based combat, and puzzle sequences</li>
+        <li>Original score and full atmospheric sound design</li>
       </ul>
     </div>
   </div>
@@ -1166,6 +1168,7 @@
     <div class="masonry-item"><img src="/game/images/bearattack.jpeg" alt="" loading="lazy" /></div>
     <div class="masonry-item"><img src="/game/images/sutilkigi.jpeg" alt="" loading="lazy" /></div>
     <div class="masonry-item"><img src="/game/images/insidefactory.jpeg" alt="" loading="lazy" /></div>
+    <div class="masonry-item"><img src="/game/images/tundrawalking.jpeg" alt="" loading="lazy" /></div>
   </div>
 </section>
 
@@ -1176,7 +1179,7 @@
       <span class="label">Available Now</span>
       <h2 class="display">Begin your story.</h2>
       <div class="divider"></div>
-      <p>The Solarium is a free-to-play visual novel available on PC. Every playthrough is different. Every ending is earned.</p>
+      <p>The Solarium is a free-to-play visual novel available on PC. Every playthrough shapes a different story — who you save, who you lose, and what the world looks like when it's over. Every ending is earned.</p>
       <div class="badges">
         <a href="#" class="badge">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
@@ -1203,7 +1206,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       The Solarium
-      <small>A Visual Novel &nbsp;·&nbsp; 2025</small>
+      <small>Candid Bay Productions &nbsp;·&nbsp; 2026</small>
     </div>
     <div class="footer-cols">
       <div class="footer-col">
@@ -1227,7 +1230,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 The Solarium. All rights reserved.</p>
+    <p>© 2026 Candid Bay Productions. All rights reserved.</p>
     <span class="footer-rating">Mature 17+</span>
   </div>
 </footer>
